@@ -1,31 +1,3 @@
-# Design a Website for Server Side Processing
-
-## AIM:
-To design a website to perform mathematical calculations in server side.
-
-## DESIGN STEPS:
-
-### Step 1:
-Clone the repository from github
-
-### Step 2:
-Create Django Admin project
-
-### Step 3:
-Create a new App
-
-### Step 4:
-Create python programs for views and urls
-
-### Step 5:
-Create a HTML file of forms
-
-### Step 6:
-Publish the website in the given URL.
-
-## PROGRAM :
-#### math.html:
-```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -99,52 +71,10 @@ Publish the website in the given URL.
                 Area=<input type="text" name="area" value={{area}}></input>
             </div>
             <div class="footer">
-                    Developed by Prajeeth K T
+                    Developed by Gokul J
             </div>
         </form>
     </div>
     
 </body>
 </html>
-```
-#### views.py:
-```py
-from django.shortcuts import render
-def rectarea(request):
-    context={}
-    context['area'] = "0"
-    context['l'] = "0"
-    context['b'] = "0"
-    if request.method == 'POST':
-        print("POST method is used")
-        l = request.POST.get('length','0')
-        b = request.POST.get('breadth','0')
-        print('request=',request)
-        print('Length=',l)
-        print('Breadth=',b)
-        area = int(l) * int(b)
-        context['area'] = area
-        context['l'] = l
-        context['b'] = b
-        print('Area=',area)
-    return render(request,'myapp/math.html',context)
-```
-#### urls.py:
-```py
-from django.contrib import admin
-from django.urls import path
-from myapp import views
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('areaofrectangle/',views.rectarea,name="areaofrectangle"),
-    path('',views.rectarea,name="areaofrectangleroot")
-]
-```
-## SERVER OUTPUT:
-![sop](/img/sop.png)
-
-## CLIENT OUTPUT:
-![cop](/img/cop.png)
-
-## Result:
-Thus a program to design a website to perform mathematical calculations in server side has been created and executed successfully.
