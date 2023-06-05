@@ -141,10 +141,12 @@ urlpatterns = [
 ]
 ```
 ## SERVER OUTPUT:
-![sop](/img/sop.png)
+![Screenshot 2023-06-05 113436](https://github.com/Gokul0117/serversideprocessing/assets/121165938/d66edbd7-74da-4743-8aed-3b3da8ce5c2c)
+
+
 
 ## CLIENT OUTPUT:
-![cop](/img/cop.png)
+![Screenshot 2023-06-05 113638](https://github.com/Gokul0117/serversideprocessing/assets/121165938/985b95fe-7869-478c-b89a-7a83edb3269b)
 
 ## Result:
 Thus a program to design a website to perform mathematical calculations in server side has been created and executed successfully.
